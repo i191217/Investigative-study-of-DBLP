@@ -136,7 +136,7 @@ def method2(For):
 
 # Assignment # 3
 
-db = pymysql.connect("localhost","root","Mufcmucf20","somedb" )
+db = pymysql.connect("localhost","root","********","somedb" )
 
 cursor2 = db.cursor()
 
@@ -204,7 +204,7 @@ search.grid(column=4, row=32)
 
 # Predicting Journals/Conferences through Gaussian Naive Bayes
 
-db = pymysql.connect("localhost","root","Mufcmucf20","data123" )
+db = pymysql.connect("localhost","root","********","data123" )
 cursor3 = db.cursor()
 
 cursor3.execute("select distinct journal_id from someView where year < 2017 order by journal_id")
@@ -224,7 +224,7 @@ k_Label20.grid(column=0, row=75)
 
 
 def Journal_GNB():
-    db = pymysql.connect("localhost", "root", "Mufcmucf20", "data123")
+    db = pymysql.connect("localhost", "root", "********", "data123")
     cursor = db.cursor()
 
     s = FoR3.get()
@@ -284,7 +284,7 @@ search2.grid(column=2, row=65)
 
 # Predicting Journals/Conferences through Support Vector Machine(SVM)
 
-db = pymysql.connect("localhost","root","Mufcmucf20","data123" )
+db = pymysql.connect("localhost","root","********","data123" )
 cursor4 = db.cursor()
 
 cursor4.execute("select distinct journal_id from someView where year < 2017 order by journal_id")
@@ -308,7 +308,7 @@ def Journal_SVM():
     row2 = []
     s = FoR4.get()
 
-    db = pymysql.connect("localhost", "root", "Mufcmucf20", "data123")
+    db = pymysql.connect("localhost", "root", "********", "data123")
     cursor = db.cursor()
     cursor.execute("SELECT * FROM someView where year < 2017 AND journal_id = %s", (s,))
     some = cursor.fetchall()
@@ -540,7 +540,7 @@ search4.grid(column=2, row=200)
 
 
 
-db = pymysql.connect("localhost","root","Mufcmucf20","data123" )
+db = pymysql.connect("localhost","root","********","data123" )
 cursor8 = db.cursor()
 
 cursor8.execute("SELECT year FROM data123.yearwise where year >= 2017")
@@ -563,7 +563,7 @@ def method():
     row = []
     row2 = []
 
-    db = pymysql.connect("localhost", "root", "Mufcmucf20", "data123")
+    db = pymysql.connect("localhost", "root", "********", "data123")
     cursor = db.cursor()
     cursor.execute("select * from data123.yearwise where year < 2017")
     some = cursor.fetchall()
